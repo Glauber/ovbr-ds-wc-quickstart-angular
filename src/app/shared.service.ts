@@ -4,5 +4,7 @@ import { Injectable } from '@angular/core'
   providedIn: 'root',
 })
 export class SharedService {
-  isOpen: boolean = true
+  public isOpen: boolean = false
+
+  constructor() {}
 }
