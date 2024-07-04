@@ -1,0 +1,17 @@
+.table {
+
+    th,
+    td {
+        padding: 0.25rem; // Reduzir o padding para diminuir a altura das linhas
+        vertical-align: middle;
+    }
+
+    th {
+        font-size: 0.85rem; // Ajustar o tamanho do texto do cabeçalho se necessário
+        padding-left: 1rem;
+    }
+
+    td {
+        font-size: 0.85rem; // Ajustar o tamanho do texto das células se necessário
+    }
+}

@@ -1,0 +1,25 @@
+.table-responsive {
+    margin-top: 20px;
+
+    .table {
+
+        th,
+        td {
+            vertical-align: middle;
+            padding: 0.5rem; // Reduzir o padding para diminuir a altura das linhas
+        }
+
+        th {
+            font-size: 0.85rem; // Diminuir o tamanho do texto dos cabeçalhos
+            line-height: 1.2; // Ajustar a altura da linha para caber o texto em uma linha
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 0.25rem; // Reduzir o padding dos inputs
+            box-sizing: border-box;
+            margin-top: 0.25rem; // Espaçamento entre o cabeçalho e o input
+            font-size: 0.75rem; // Diminuir o tamanho do texto dos inputs
+        }
+    }
+}

@@ -1,0 +1,104 @@
+<nav class="br-breadcrumb">
+    <ol class="crumb-list" role="list">
+        <li class="crumb home"><a class="br-button circle" href="javascript:void(0)"><span
+                      class="sr-only">Página inicial</span><i class="fas fa-home"></i></a></li>
+        <li class="crumb">
+            <i class="icon fas fa-chevron-right"></i>
+            <a href="javascript:void(0)">Lançamentos</a>
+        </li>
+        <li class="crumb">
+            <i class="icon fas fa-chevron-right"></i>
+            <a href="javascript:void(0)">Detalhe</a>
+        </li>
+    </ol>
+</nav>
+<div *ngIf="lancamento">
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <th>Nº de Lançamento</th>
+                <td>{{ lancamento.numero }}</td>
+            </tr>
+            <tr>
+                <th>Órgão Gerador</th>
+                <td>{{ lancamento.orgao }}</td>
+            </tr>
+            <tr>
+                <th>Código de Receita</th>
+                <td>{{ lancamento.codigoReceita }}</td>
+            </tr>
+            <tr>
+                <th>Objeto</th>
+                <td>{{ lancamento.objeto }}</td>
+            </tr>
+            <tr>
+                <th>CPF/CNPJ</th>
+                <td>{{ lancamento.cpfCnpj }}</td>
+            </tr>
+            <tr>
+                <th>Situação</th>
+                <td>{{ lancamento.situacao }}</td>
+            </tr>
+            <tr>
+                <th>Nome</th>
+                <td>{{ lancamento.nome }}</td>
+            </tr>
+            <tr>
+                <th>E-mail</th>
+                <td>{{ lancamento.email }}</td>
+            </tr>
+            <tr>
+                <th>Telefone</th>
+                <td>{{ lancamento.telefone }}</td>
+            </tr>
+            <tr>
+                <th>Endereço</th>
+                <td>{{ lancamento.endereco }}</td>
+            </tr>
+            <tr>
+                <th>Bairro</th>
+                <td>{{ lancamento.bairro }}</td>
+            </tr>
+            <tr>
+                <th>Cidade</th>
+                <td>{{ lancamento.cidade }}</td>
+            </tr>
+            <tr>
+                <th>UF</th>
+                <td>{{ lancamento.uf }}</td>
+            </tr>
+            <tr>
+                <th>CEP</th>
+                <td>{{ lancamento.cep }}</td>
+            </tr>
+            <tr>
+                <th>Motivo</th>
+                <td>{{ lancamento.motivo }}</td>
+            </tr>
+            <tr>
+                <th>Cota</th>
+                <td>{{ lancamento.cota }}</td>
+            </tr>
+            <tr>
+                <th>Vencimento</th>
+                <td>{{ lancamento.vencimento }}</td>
+            </tr>
+            <tr>
+                <th>Imposto Corrigido</th>
+                <td>{{ lancamento.impostoCorrigido }}</td>
+            </tr>
+            <tr>
+                <th>Multa</th>
+                <td>{{ lancamento.multa }}</td>
+            </tr>
+            <tr>
+                <th>Mora</th>
+                <td>{{ lancamento.mora }}</td>
+            </tr>
+            <tr>
+                <th>Valor Total</th>
+                <td>{{ lancamento.valorTotal }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
