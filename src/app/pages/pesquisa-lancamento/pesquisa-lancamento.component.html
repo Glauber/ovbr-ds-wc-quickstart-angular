@@ -1,0 +1,106 @@
+<div class="br-section">
+    <div class="br-section-header">
+        <p class="br-text text-small">{{ saudacao }}</p>
+        <h5 class="br-section-title">Consulta de Débitos</h5>
+    </div>
+
+    <form class="br-form" [formGroup]="pesquisarLancamentoForm">
+        <div class="row">
+            <div class="col col-4 col-md-4">
+                <br-input type="text" id="numero-lancamento" placeholder="Número do Lançamento"
+                          formControlName="numeroLancamento">
+                </br-input>
+            </div>
+            <div class="col col-4 col-md-4">
+                <br-select id="orgao" formControlName="orgao" placeholder="Órgão">
+                    <option value="123" disabled selected>Órgão 123</option>
+                    <option value="124" disabled selected>Órgão 124</option>
+                    <option value="125" disabled selected>Órgão 125</option>
+                    <option value="126" disabled selected>Órgão 126</option>
+                    <option value="127" disabled selected>Órgão 127</option>
+                </br-select>
+            </div>
+            <div class="col col-4 col-md-4">
+                <br-input type="data" id="dataInclusao" placeholder="Data de Inclusão"
+                          formControlName="dataInclusao">
+                </br-input>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col col-4 col-md-4">
+                <br-input type="text" id="cpf-cnpj" placeholder="CPF/CNPJ"
+                          [textMask]="{mask: cpfCnpjMask}" formControlName="cpfCnpj"></br-input>
+            </div>
+            <div class="col col-4 col-md-4">
+                <div class="br-select">
+                    <div class="br-input">
+                        <input id="select-simple" type="text" placeholder="SITUAÇÃO" />
+                        <button class="br-button" type="button" aria-label="Exibir lista"
+                                tabindex="-1" data-trigger="data-trigger"><i
+                               class="fas fa-angle-down" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="br-list" tabindex="0">
+                        <div class="br-item" tabindex="-1">
+                            <div class="br-radio">
+                                <input id="rb0" type="radio" name="estados-simples" value="00" />
+                                <label for="rb0">00 - Não pago</label>
+                            </div>
+                        </div>
+                        <div class="br-item" tabindex="-1">
+                            <div class="br-radio">
+                                <input id="rb1" type="radio" name="estados-simples" value="01" />
+                                <label for="rb1">01 - Quitado</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-4 col-md-4">
+                <div class="br-select">
+                    <div class="br-input">
+                        <input id="select-simple" type="text" placeholder="ORIGEM DO DÉBITO" />
+                        <button class="br-button" type="button" aria-label="Exibir lista"
+                                tabindex="-1" data-trigger="data-trigger"><i
+                               class="fas fa-angle-down" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="br-list" tabindex="0">
+                        <div class="br-item" tabindex="-1">
+                            <div class="br-radio">
+                                <input id="rb0" type="radio" name="estados-simples" value="rb0" />
+                                <label for="rb0">OD001</label>
+                            </div>
+                        </div>
+                        <div class="br-item" tabindex="-1">
+                            <div class="br-radio">
+                                <input id="rb1" type="radio" name="estados-simples" value="rb1" />
+                                <label for="rb1">OD002</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="br-col br-col-12">
+                <div class="btn-group d-flex justify-content-md-end">
+                    <br-button id="consultar" label="Consultar" type="primary" class="mt-3 mr-1"
+                               (click)="consultar()" [attr.aria-labelledby]="'Consultar Débitos'">
+                    </br-button>
+                    <br-button id="limparDados" label="LImpar Dados" type="secondary"
+                               class="mt-3 mr-1" (click)="limparDados()"
+                               [attr.aria-labelledby]="'Limpar Dados'">
+                    </br-button>
+                    <br-button id="novoLancamento" label="Novo Lançamento" type="secondary"
+                               class="mt-3 mr-1" (click)="novoLancamento()"
+                               [attr.aria-labelledby]="'Novo Lançamento'">
+                    </br-button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!-- <br-message *ngIf="this.submitted" [state]="messageType" closable>{{ message }}</br-message> -->
+</div>

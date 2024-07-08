@@ -10,12 +10,53 @@ import { SignInComponent } from './sign-in/sign-in.component'
 import { LancamentoListaComponent } from './pages/lancamento-lista/lancamento-lista.component'
 import { LancamentoComponent } from './pages/lancamento/lancamento.component'
 import { LayoutComponent } from './pages/layout/layout.component'
+import { PesquisaLancamentoComponent } from './pages/pesquisa-lancamento/pesquisa-lancamento.component'
+import { RelatorioFinanceiroComponent } from './pages/relatorio-financeiro/relatorio-financeiro.component'
+import { RelatorioLancamentoComponent } from './pages/relatorio-lancamento/relatorio-lancamento.component'
+import { ServicosLoteComponent } from './pages/servicos-lote/servicos-lote.component'
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'inicio',
     pathMatch: 'full',
+  },
+  {
+    path: '',
+    component: LayoutComponent,
+    children: [
+      {
+        path: 'inicio',
+        component: HomeComponent,
+      },
+      {
+        path: 'pesquisar-lancamento',
+        component: PesquisaLancamentoComponent,
+        data: { breadCrumb: 'Pesquisa de Lançamentos' },
+      },
+      {
+        path: 'relatorio-lancamento',
+        component: RelatorioLancamentoComponent,
+        data: { breadCrumb: 'RELATORIO DE LANÇAMENTOS' },
+      },
+      {
+        path: 'relatorio-financeiro',
+        component: RelatorioFinanceiroComponent,
+        data: { breadCrumb: 'RELATORIO FINANCEIRO' },
+      },
+      {
+        path: 'servicos-lote',
+        component: ServicosLoteComponent,
+        data: { breadCrumb: 'SERVIÇOS EM LOTE' },
+      },
+      {
+        path: 'lancamento-lista',
+        component: LancamentoListaComponent,
+        data: { breadCrumb: 'Lista de Lançamentos' },
+      },
+      { path: 'lancamento/:id', component: LancamentoComponent },
+
+    ],
   },
   {
     path: 'home',
@@ -37,23 +78,7 @@ const routes: Routes = [
     component: CookiebarComponent,
     data: { breadCrumb: 'Cookiebar' },
   },
-  {
-    path: '',
-    component: LayoutComponent,
-    children: [
-      {
-        path: 'inicio',
-        component: HomeComponent,
-      },
-      {
-        path: 'lancamento-lista',
-        component: LancamentoListaComponent,
-        data: { breadCrumb: 'Lista de Lançamentos' },
-      },
-      { path: 'lancamento/:id', component: LancamentoComponent },
 
-    ],
-  },
 ];
 
 

@@ -1,0 +1,96 @@
+<div class="br-section">
+    <div class="br-section-header">
+        <h5 class="br-section-title">RELATÓRIO DE LANÇAMENTOS</h5>
+    </div>
+
+    <form class="br-form">
+        <div class="row">
+            <div class="col col-4 col-md-4">
+                <br-input type="date" id="periodo-inicial" placeholder="Período Inicial"
+                          formControlName="periodoInicial"></br-input>
+            </div>
+            <div class="col col-4 col-md-4">
+                <br-input type="date" id="periodo-final" placeholder="Período Final"
+                          formControlName="periodoFinal"></br-input>
+            </div>
+            <div class="col col-4 col-md-4">
+                <br-input type="date" id="data-comando-inicial"
+                          placeholder="Data do Comando Inicial"
+                          formControlName="dataComandoInicial"></br-input>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col col-4 col-md-4">
+                <br-input type="text" id="cpf-cnpj-contribuinte"
+                          placeholder="CPF/CNPJ do Contribuinte"
+                          formControlName="cpfCnpjContribuinte"></br-input>
+            </div>
+            <div class="col col-4 col-md-4">
+                <br-input type="date" id="data-calculo" placeholder="Data de Cálculo"
+                          formControlName="dataCalculo"></br-input>
+            </div>
+            <div class="col col-4 col-md-4">
+                <br-input type="date" id="data-comando-final" placeholder="Data do Comando Final"
+                          formControlName="dataComandoFinal"></br-input>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col col-4 col-md-4">
+                <br-input type="number" id="numero-lancamento" placeholder="Número do Lançamento"
+                          formControlName="numeroLancamento"></br-input>
+            </div>
+            <div class="col col-4 col-md-4">
+                <br-input type="number" id="codigo-receita" placeholder="Código da Receita"
+                          formControlName="codigoReceita"></br-input>
+            </div>
+            <div class="col col-4 col-md-4">
+                <br-select id="orgao" formControlName="orgao" placeholder="Órgão">
+                    <option value="123" disabled selected>Órgão 123</option>
+                    <option value="124" disabled selected>Órgão 124</option>
+                    <option value="125" disabled selected>Órgão 125</option>
+                    <option value="126" disabled selected>Órgão 126</option>
+                    <option value="127" disabled selected>Órgão 127</option>
+                </br-select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col col-4 col-md-4">
+                <br-select id="situacao-lancamento" formControlName="situacaoLancamento"
+                           placeholder="Situação de Lançamento">
+                    <option value="00" disabled selected>Selecione</option>
+                    <option value="01">01 - Ativo</option>
+                    <option value="02">02 - Inativo</option>
+                    <option value="03">03 - Suspenso</option>
+                </br-select>
+            </div>
+            <div class="col col-8 col-md-8 mt-3">
+                <div class="br-checkbox">
+                    <input id="extrair-dados-historico" name="h-checkbox-2" type="checkbox" />
+                    <label for="h-checkbox-2">Extrair dados do histórico (Órgãos de
+                        controle/Auditoria)</label>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="br-col br-col-12">
+                <div class="btn-group d-flex justify-content-md-end">
+                    <br-button id="consultar" label="Consultar" type="primary" class="mt-3 mr-1"
+                               (click)="consultar()" [attr.aria-labelledby]="'Consultar Débitos'">
+                    </br-button>
+                    <br-button id="limparDados" label="LImpar Dados" type="secondary"
+                               class="mt-3 mr-1" (click)="limparDados()"
+                               [attr.aria-labelledby]="'Limpar Dados'">
+                    </br-button>
+                    <br-button id="novoLancamento" label="Novo Lançamento" type="secondary"
+                               class="mt-3 mr-1" (click)="voltar()"
+                               [attr.aria-labelledby]="'Novo Lançamento'">
+                    </br-button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
