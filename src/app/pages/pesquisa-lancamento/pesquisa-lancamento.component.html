@@ -6,12 +6,12 @@
 
     <form class="br-form" [formGroup]="pesquisarLancamentoForm">
         <div class="row">
-            <div class="col col-4 col-md-4">
+            <div class="col">
                 <br-input type="text" id="numero-lancamento" placeholder="Número do Lançamento"
                           formControlName="numeroLancamento">
                 </br-input>
             </div>
-            <div class="col col-4 col-md-4">
+            <div class="col">
                 <br-select id="orgao" formControlName="orgao" placeholder="Órgão">
                     <option value="123" disabled selected>Órgão 123</option>
                     <option value="124" disabled selected>Órgão 124</option>
@@ -20,7 +20,7 @@
                     <option value="127" disabled selected>Órgão 127</option>
                 </br-select>
             </div>
-            <div class="col col-4 col-md-4">
+            <div class="col">
                 <br-input type="data" id="dataInclusao" placeholder="Data de Inclusão"
                           formControlName="dataInclusao">
                 </br-input>
@@ -28,11 +28,11 @@
         </div>
 
         <div class="row">
-            <div class="col col-4 col-md-4">
+            <div class="col">
                 <br-input type="text" id="cpf-cnpj" placeholder="CPF/CNPJ"
                           [textMask]="{mask: cpfCnpjMask}" formControlName="cpfCnpj"></br-input>
             </div>
-            <div class="col col-4 col-md-4">
+            <div class="col">
                 <div class="br-select">
                     <div class="br-input">
                         <input id="select-simple" type="text" placeholder="SITUAÇÃO" />
@@ -57,7 +57,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col col-4 col-md-4">
+            <div class="col">
                 <div class="br-select">
                     <div class="br-input">
                         <input id="select-simple" type="text" placeholder="ORIGEM DO DÉBITO" />
@@ -84,7 +84,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="br-col br-col-12">
+            <div class="col">
                 <div class="btn-group d-flex justify-content-md-end">
                     <br-button id="consultar" label="Consultar" type="primary" class="mt-3 mr-1"
                                (click)="consultar()" [attr.aria-labelledby]="'Consultar Débitos'">
